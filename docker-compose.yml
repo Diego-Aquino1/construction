@@ -1,0 +1,11 @@
+services:
+  constructora-frontend:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./src:/app/src
+    restart: unless-stopped
+    container_name: constructora-frontend
